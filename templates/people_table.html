@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="/static/js/slickgrid/slick.grid.css"/>
+<link rel="stylesheet" href="/static/js/slickgrid/css/smoothness/jquery-ui-1.8.16.custom.css"/>
+<link rel="stylesheet" href="/static/js/slickgrid/examples/examples.css"/>
+<script type="text/javascript" src="/static/js/slickgrid/lib/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="/static/js/slickgrid/lib/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="/static/js/slickgrid/lib/jquery.event.drag-2.2.js"></script>
+<script type="text/javascript" src="/static/js/slickgrid/slick.core.js"></script>
+<script type="text/javascript" src="/static/js/slickgrid/slick.formatters.js"></script>
+<script type="text/javascript" src="/static/js/slickgrid/slick.editors.js"></script>
+<script type="text/javascript" src="/static/js/slickgrid/slick.grid.js"></script>
+<script type="text/javascript" src="/static/js/slickgrid/slick.dataview.js"></script>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>People Table</h1>
+<div>
+    <select id="table-select">
+        <option value="people">People</option>
+        <option value="institutions">Institution</option>
+        <option value="affiliations">Affiliations</option>
+    </select>
+</div>
+<div id="myGrid" style="width:100%;height:500px;"></div>
+{% csrf_token %}
+<script>
+    // using jQuery
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+    $("#table-select").change(function(){
+        window.location.href = "/table/" + this.value;
+    })
+    var dataView = new Slick.Data.DataView();
+    var grid;
+    var data;
+    var rows;
+    var options = {
+      enableCellNavigation: true,
+      enableColumnReorder: false,
+      editable: true,
+      enableAddRow: true
+    };
+    function createRow(item){
+        console.log(item);
+        if (item.birthday == null){
+            delete item.birthday;
+        }
+        else {
+            var b = item.birthday.split('/');
+            var year = b.pop();
+            item.birthday = year + "-" + b.join('-')
+        }
+        $.post('/api/' + $("#table-select").val(), item
+        ).success(
+            function(data){
+                console.log(data);
+                dataView.addItem(data);
+            }
+        );
+    }
+    function updateRow(item){
+        console.log(item);
+        if (item.birthday == null){
+            delete item.birthday;
+        }
+        else {
+            var b = item.birthday.split('/');
+            var year = b.pop();
+            item.birthday = year + "-" + b.join('-')
+        }
+        $.ajax({url:'/api/' + $("#table-select").val(), data:item, type:'PUT',
+                success:function(data){
+                console.log(data);
+            }}
+        )
+    }
+    $(function () {
+        var selected = window.location.href.split('/').pop();
+        $("#table-select").val(selected);
+    $.ajax('/api/{{ table_name }}').done(
+        function(data){
+            cols = data.columns;
+            for(var i = 0; i < cols.length; i++) {
+                var editor;
+                if(cols[i].type == 'Date') {
+                    editor = Slick.Editors.Date;
+                }
+                else if(cols[i].type == 'Integer' | cols[i].type == 'Float') {
+                    editor = Slick.Editors.Integer;
+                }
+                else {
+                    editor = Slick.Editors.Text;
+                }
+                if(cols[i].name == 'id') {
+                    editor = null;
+                }
+                $.extend(cols[i], {editor:editor});
+            }
+            dataView.setItems(data.rows);
+            grid = new Slick.Grid("#myGrid", dataView, cols, options);
+
+            grid.onAddNewRow.subscribe(function (e, args) {
+                createRow(args.item);
+            });
+            grid.onCellChange.subscribe(function (e, args) {
+                    updateRow(args.item);
+                });
+            dataView.onRowCountChanged.subscribe(function (e, args) {
+              grid.updateRowCount();
+              grid.render();
+            });
+
+            dataView.onRowsChanged.subscribe(function (e, args) {
+              grid.invalidateRows(args.rows);
+              grid.render();
+            });
+        }
+    )
+
+    })
+</script>
+</body>
+</html>
