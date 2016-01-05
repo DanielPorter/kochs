@@ -12,6 +12,13 @@ class Person(models.Model):
         return self.last_name + ", " + self.first_name
 
 
+class ResearchDiscipline(models.Model):
+    name = models.CharField(max_length=200)
+    people = models.ManyToManyField(Person)
+
+    def __unicode__(self):
+        return self.name
+
 class InstitutionType(models.Model):
     name = models.CharField(max_length=200)
 
@@ -27,6 +34,7 @@ class Institution(models.Model):
     state = models.CharField(max_length=200, blank=True)
     notes = models.TextField(blank=True)
     public_or_private = models.TextField(blank=True)
+    site = models.TextField(blank=True)
 
     def __unicode__(self):
         return self.name
@@ -34,6 +42,9 @@ class Institution(models.Model):
 
 class AffiliationType(models.Model):
     name = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.name
 
 class Affiliation(models.Model):
     person = models.ForeignKey(Person, related_name='person')
@@ -48,7 +59,7 @@ class Affiliation(models.Model):
     source = models.TextField(blank=True)
 
     def __unicode__(self):
-        return self.position + ", " + str(self.person) + " at " + str(self.institution)
+        return str(self.title) + ", " + str(self.person) + " at " + str(self.institution)
 
 
 class PaymentType(models.Model):

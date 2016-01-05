@@ -5,6 +5,9 @@ from rest_framework.response import Response
 from models import Person, Institution, InstitutionType, Affiliation, Relationship
 from serializers import PersonSerializer, InstitutionSerializer, AffiliationSerializer, RelationshipSerializer
 
+def d3(request):
+    return render_to_response('d3.html')
+
 
 def Table(request, table_name):
     c = {'table_name': table_name}
