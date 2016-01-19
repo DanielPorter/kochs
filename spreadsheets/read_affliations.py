@@ -18,7 +18,7 @@ with transaction.atomic():
             institution.save()
         affiliation_type = AffiliationType.objects.get_or_create(name=row[3].value)
         
-        if row[6].value != '':
+        if row[5].value != '':
             start_date = datetime.datetime.strptime(str(int(row[5].value)), '%Y')
         else:
             start_date = None
@@ -30,7 +30,7 @@ with transaction.atomic():
         affiliation = Affiliation.objects.create(
                 person=person, 
                 institution=institution, 
-                title=row[6].value,
+                title=row[4].value,
                 start_date=start_date,
                 end_date=end_date,
                 primary=bool(row[7].value)
