@@ -101,6 +101,8 @@ class Relationship(models.Model):
     person_a = models.ForeignKey(Person, related_name='person_a')
     person_b = models.ForeignKey(Person, related_name='person_b')
     relationship_type = models.ForeignKey(RelationshipTypes)
+    start_date = models.DateField(null=True)
+    end_date = models.DateField(null=True)
 
     def __unicode__(self):
         return str(self.person_a) + " is " + self.relationship_type.name + " to " + str(self.person_b)
