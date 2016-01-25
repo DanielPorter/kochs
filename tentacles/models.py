@@ -30,6 +30,7 @@ class Institution(models.Model):
     name = models.CharField(max_length=200, null=True)
     institution_type = models.ForeignKey(InstitutionType, null=True)
     parent = models.ForeignKey("Institution", related_name='inst_parent', null=True, blank=True)
+    root_institution = models.ForeignKey("Institution", related_name="root_inst", null=True, blank=True)
     country = models.CharField(max_length=200, blank=True)
     state = models.CharField(max_length=200, blank=True)
     notes = models.TextField(blank=True)
