@@ -14,16 +14,21 @@ with transaction.atomic():
             parent, created = Institution.objects.get_or_create(name=row[2].value)
         else:
             parent = None
-        country = row[3].value
-        state = row[4].value
-        public_or_private = row[5].value
-        notes = row[6].value
+        if row[3] != '':
+            root, created = Institution.objects.get_or_create(name=row[3].value)
+        else:
+            root = None
+        country = row[4].value
+        state = row[5].value
+        public_or_private = row[6].value
+        notes = row[7].value
         print i
 
         inst, created = Institution.objects.get_or_create(name=name)
         inst.name=name
         inst.institution_type=inst_type
         inst.parent = parent
+        inst.root_institution = root
         inst.country = country
         inst.state = state
         inst.notes = notes

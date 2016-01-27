@@ -9,7 +9,7 @@ print "okay!"
 with transaction.atomic():
     for i in xrange(2, sheet.nrows):
         row = sheet.row(i)
-        fname, lname = row[0].value.split(',')
+        lname, fname = row[0].value.split(',')
         person, created = Person.objects.get_or_create(first_name=fname, last_name=lname)
         institution, created = Institution.objects.get_or_create(name=row[1].value)
         if row[2].value != '':

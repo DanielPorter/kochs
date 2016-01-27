@@ -23,28 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="serializers.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tentacles/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="27" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="885">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kochs/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="42" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="510">
+            <state line="22" column="45" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tentacles/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.86238533" vertical-offset="1011" max-vertical-offset="1710">
+            <state line="33" column="40" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1725">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="load_institutions.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spreadsheets/load_institutions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="29" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,16 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kochs/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="19" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1785">
+            <state line="113" column="27" selection-start="2891" selection-end="2891" vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="1785">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kochs/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <folding />
             </state>
           </provider>
@@ -62,7 +71,27 @@
       <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tentacles/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="39" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="810">
+            <state line="5" column="24" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tentacles/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="135" column="134" selection-start="5293" selection-end="5293" vertical-scroll-proportion="0.863388" vertical-offset="1551" max-vertical-offset="2130">
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="600">
               <folding />
             </state>
           </provider>
@@ -71,44 +100,21 @@
       <file leaf-file-name="read_affliations.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spreadsheets/read_affliations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="38" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="645">
+            <state line="13" column="57" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load_payments.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spreadsheets/load_payments.py">
+      <file leaf-file-name="institution_report.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/institution_report.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="1208" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tentacles/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="29" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1740">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slick.formatters.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/slickgrid/slick.formatters.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="39" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1050">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
-              <folding />
+            <state line="188" column="55" selection-start="4879" selection-end="4879" vertical-scroll-proportion="-5.625" vertical-offset="2685" max-vertical-offset="3300">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,22 +134,24 @@
         <option value="$PROJECT_DIR$/static/js/slickgrid/slick.formatters.js" />
         <option value="$PROJECT_DIR$/templates/people_table.html" />
         <option value="$PROJECT_DIR$/tentacles/serializers.py" />
-        <option value="$PROJECT_DIR$/spreadsheets/read_affliations.py" />
         <option value="$PROJECT_DIR$/spreadsheets/load_instititutions.py" />
-        <option value="$PROJECT_DIR$/spreadsheets/load_institutions.py" />
-        <option value="$PROJECT_DIR$/tentacles/views.py" />
-        <option value="$PROJECT_DIR$/kochs/urls.py" />
         <option value="$PROJECT_DIR$/templates/d3.html" />
-        <option value="$PROJECT_DIR$/kochs/settings.py" />
         <option value="$PROJECT_DIR$/tentacles/admin.py" />
         <option value="$PROJECT_DIR$/tentacles/models.py" />
+        <option value="$PROJECT_DIR$/institution_report.html" />
+        <option value="$PROJECT_DIR$/kochs/settings.py" />
+        <option value="$PROJECT_DIR$/spreadsheets/read_affliations.py" />
+        <option value="$PROJECT_DIR$/spreadsheets/load_institutions.py" />
+        <option value="$PROJECT_DIR$/kochs/urls.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/institution_report.html" />
+        <option value="$PROJECT_DIR$/tentacles/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="795" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -213,6 +221,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kochs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kochs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -258,9 +280,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="SearchEverywhereHistory" value="" />
-    <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="%" />
+    <property name="FullScreen" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -450,6 +473,12 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="false" name="kochs" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -490,7 +519,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="795" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -502,7 +531,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264463" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27710843" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -550,30 +579,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spreadsheets/load_institutions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="56" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="555" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/d3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="12" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="780" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spreadsheets/load_payments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1208" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tentacles/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/slickgrid/slick.formatters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="39" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
@@ -623,7 +628,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spreadsheets/load_institutions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="56" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="555" />
+        <state line="10" column="56" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="555">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spreadsheets/load_payments.py">
@@ -636,7 +643,9 @@
     <entry file="file://$PROJECT_DIR$/tentacles/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="33" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1695">
-          <folding />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -693,7 +702,9 @@
     <entry file="file://$PROJECT_DIR$/tentacles/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="33" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1695">
-          <folding />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -755,7 +766,9 @@
     <entry file="file://$PROJECT_DIR$/tentacles/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1200">
-          <folding />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -821,55 +834,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spreadsheets/read_affliations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="38" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tentacles/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/d3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="137" selection-end="137" vertical-scroll-proportion="0.16803278" vertical-offset="27" max-vertical-offset="780" />
+        <state line="10" column="24" selection-start="137" selection-end="137" vertical-scroll-proportion="0.16803278" vertical-offset="27" max-vertical-offset="780">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spreadsheets/load_institutions.py">
+    <entry file="file://$PROJECT_DIR$/kochs/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kochs/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="480">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="424">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kochs/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="19" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1785">
+        <state line="113" column="27" selection-start="2891" selection-end="2891" vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/institution_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="99" selection-end="99" vertical-scroll-proportion="0.30150753" vertical-offset="0" max-vertical-offset="398">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tentacles/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="39" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+        <state line="5" column="24" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spreadsheets/load_institutions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="29" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spreadsheets/read_affliations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="57" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kochs/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="45" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tentacles/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.86238533" vertical-offset="1011" max-vertical-offset="1710">
+        <state line="33" column="40" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1725">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/institution_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="55" selection-start="4879" selection-end="4879" vertical-scroll-proportion="-5.625" vertical-offset="2685" max-vertical-offset="3300">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tentacles/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="134" selection-start="5293" selection-end="5293" vertical-scroll-proportion="0.863388" vertical-offset="1551" max-vertical-offset="2130">
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

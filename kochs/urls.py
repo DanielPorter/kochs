@@ -18,6 +18,7 @@ from django.contrib import admin
 from tentacles import views
 
 urlpatterns = [
+    url(r'^reports/institution/(?P<id>\d+)$', views.InstitutionReport),
     url(r'^d3', views.d3),
     url(r'^table/(?P<table_name>.+)$', views.Table),
     url(r'^api/people$', views.ListPeople.as_view()),

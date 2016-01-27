@@ -2,8 +2,10 @@ from django.shortcuts import render, render_to_response
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
-from models import Person, Institution, InstitutionType, Affiliation, Relationship
+from models import Person, Institution, InstitutionType, Affiliation, Relationship, Payment
 from serializers import PersonSerializer, InstitutionSerializer, AffiliationSerializer, RelationshipSerializer
+from itertools import groupby
+from django.db.models import Q
 
 def d3(request):
     return render_to_response('d3.html')
@@ -105,7 +107,30 @@ class ListRelationship(APIView):
         """
         Return a list of all institutions.
         """
+
         relationships = [relationship for relationship in Relationship.objects.all()]
         serializer = AffiliationSerializer(relationships, many=True)
         s = RelationshipSerializer()
         return Response({'columns':s.get_slick_columns(), 'rows':serializer.data})
+
+
+def InstitutionReport(request, id):
+    print id
+    root_institutions = list(Institution.objects.filter(root_institution__id=1)) + list(Institution.objects.filter(root_institution=None))
+    Q(recipient__root_parent__id=id) | Q(recipient_id=id)
+
+    ids = [x.id for x in Institution.objects.filter(root_institution=id)]
+    ids.append(id)
+    gmu_payments = Payment.objects.filter(recipient_id__in=ids).order_by('year', 'donor__name', 'recipient__name').\
+        prefetch_related('donor', 'recipient')
+    groupfunc = lambda x: x.year.strftime('%Y') + x.donor.name + x.recipient.name
+    groups = []
+    unique_keys = []
+    a = sorted(gmu_payments, key=groupfunc)
+
+    print type(id)
+    for k, g in groupby(a, groupfunc):
+        groups.append(list(g))
+        unique_keys.append(k)
+    results = [(sum([payment.amount for payment in g]), g[0].year.strftime('%Y'), g[0].recipient, g[0].donor) for g in groups]
+    return render_to_response('institution_report.html', {'results':results, 'root_institutions':root_institutions, 'selected':int(id)})
