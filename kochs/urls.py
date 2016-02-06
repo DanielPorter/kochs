@@ -19,11 +19,12 @@ from tentacles import views
 
 urlpatterns = [
     url(r'^reports/institution/(?P<id>\d+)$', views.InstitutionReport),
+    url(r'^reports/institution2/(?P<id>\d+)$', views.InstitutionDonorsAndPeopleByYear),
     url(r'^d3', views.d3),
     url(r'^table/(?P<table_name>.+)$', views.Table),
     url(r'^api/people$', views.ListPeople.as_view()),
     url(r'^api/institutions', views.ListInstitutions.as_view()),
     url(r'^api/affiliations', views.ListAffiliations.as_view()),
     url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls))
 ]
