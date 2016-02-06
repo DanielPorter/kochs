@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'tentacles',
     'rest_framework',
-    'debug_toolbar'
+    'debug_toolbar',
+    'django.contrib.humanize'
 )
 
 MIDDLEWARE_CLASSES = (

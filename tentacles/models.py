@@ -9,7 +9,7 @@ class Person(models.Model):
     birthday = models.DateField(blank=True, null=True)
 
     def __unicode__(self):
-        return self.last_name + ", " + self.first_name
+        return self.last_name + "," + self.first_name
 
 
 class ResearchDiscipline(models.Model):
