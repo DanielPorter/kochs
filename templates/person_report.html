@@ -181,15 +181,18 @@ table tr:hover td{
 <body>
 
 <div style="margin-left:20px;">
-    <h1 style="margin-left:30px;">Institution Report</h1>
-select institution:
-<select id="institution_select">
+    <h1 style="margin-left:30px;">Person Report</h1>
+select person:
+<select id="person_select">
 {% for inst in root_institutions %}
 <option value="{{ inst.id }}" {% if selected == inst.id %}selected{% endif %}>{{  inst.name}}</option>
 {%  endfor %}
 </select>
 </div>
+{% for year, affiliations in yearlyAffiliations %}
+<h2>{{ year }} {{ affiliations }}</h2>
 <table><thead>
+
 <th>Person</th>
 <th>Institution</th>
 <th>Institution type</th>
@@ -197,49 +200,29 @@ select institution:
 <th>Affiliation title</th>
 <th></th>
 </thead>
-{% for key, value in years.items %}
-    <h2>
-    {{ selectedName }} {{ key }}
-    </h2>
-    <table><thead>
-    <th>Donor</th>
-    <th>Total payments</th>
-    <th>Sub-institution</th>
-    <th>Person of Interest</th>
-    <th>Title</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Affiliation</th>
-    <th>Institution type</th>
-    </thead>
-<tbody>
-{% for payment in value.payments %}
-<tr class="{% if forloop.counter|divisibleby:2 %}even{% else %}odd{% endif %}">
-    <td style="min-width:200px">{{ payment.4 }} </td>
-    <td style="min-width:200px"> {{ payment.0 }} payment(s):  ${{ payment.1|intcomma }}</td>
-</tr>
-{%  endfor %}
-{%  for a in value.affiliations %}
-
-    <tr class=""{% if forloop.counter|divisibleby:2 %}even{% else %}odd{% endif %}>
-    <td></td><td></td>
-        <td>{{  a.institution.name }}</td>
-        <td>{{ a.person }}</td>
-        <td>{{ a.title }}</td>
-        <td>{{ a.start_date.year }}</td>
-        <td>{{ a.end_date.year }}</td>
-        <td>{{ a.affiliation_type }}</td>
-        <td>{{ a.institution.institution_type }}</td>
-{% endfor %}
-</tbody>
+    {% for affiliation in affiliations %}
+        <tbody>
+        <tr {% if affiliation.primary == True %}style="font-weight:bold"{% endif %}>
+        {% if affiliation.primary == True %}
+        <b>
+        {% endif %}
+        <td>{{ affiliation.person }}</td>
+        <td>{{ affiliation.institution }}</td>
+        <td>{{ affiliation.institution.institution_type }}</td>
+        <td>{{affiliation.affiliation_type}}</td>
+        <td>{{ affiliation.title }}</td>
+        </tr>
+        {% if affiliation.primary == True %}
+        </b>
+        {% endif %}
+        </tbody>
+    {% endfor %}
 </table>
-
 {% endfor %}
-
 </body>
 <script>
-    $('#institution_select').change(function(evt){
-    window.location.href = "/reports/institution_full/" + $(this).val();
+    $('#person_select').change(function(evt){
+        window.location.href = "/reports/person/" + $(this).val();
     });
 </script>
 </html>

@@ -20,6 +20,7 @@ from tentacles import views
 urlpatterns = [
     url(r'^reports/institution/(?P<id>\d+)$', views.InstitutionReport),
     url(r'^reports/institution_full/(?P<id>\d+)$', views.InstitutionDonorsAndPeopleByYear),
+    url(r'^reports/person/(?P<id>\d+)$', views.PersonReport),
     url(r'^d3', views.d3),
     url(r'^table/(?P<table_name>.+)$', views.Table),
     url(r'^api/people$', views.ListPeople.as_view()),

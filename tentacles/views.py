@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 from django.shortcuts import render, render_to_response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -166,3 +168,15 @@ def InstitutionDonorsAndPeopleByYear(request, id):
             years[x]["affiliations"].append(a)
     return render_to_response('institution_report_2.html', {'years':years, 'root_institutions':root_institutions, 'selected':int(id)})
 
+def PersonReport(request, id):
+    person = Person.objects.get(id=id)
+    affiliations = Affiliation.objects.filter(person=person).exclude(start_date=None).exclude(end_date=None).order_by("start_date", "primary")
+
+    start_year = min([x.start_date.year for x in affiliations])
+    end_year = max([x.end_date.year for x in affiliations])
+
+    yearlyAffiliations = OrderedDict()
+    for x in xrange(start_year, end_year + 1):
+        yearlyAffiliations[x] = [aff for aff in affiliations if x >= aff.start_date.year and x <= aff.end_date.year]
+
+    return render_to_response('person_report.html', {'yearlyAffiliations':yearlyAffiliations.iteritems()})
